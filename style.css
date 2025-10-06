@@ -1,0 +1,134 @@
+
+/* Default inställningar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fdfdfd;
+  color: #222;
+}
+
+/* CV layout- blå sidebar + vit main del */
+.cv-container {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* sida + main */
+  min-height: 100vh;
+}
+
+/* sidkolumnen */
+.sidebar {
+  background: #0b66ff;
+  color: white;
+  padding: 20px 30px;   
+}
+
+.sidebar h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 3px;
+}
+
+.sidebar p, .sidebar li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Länkar i sidokolumnen */
+.sidebar a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Huvudinnehållet till höger */
+.main-content {
+  padding: 40px;
+}
+
+.main-content h2 {
+  font-size: 1.3rem;
+  color: #0b66ff;
+  border-bottom: 2px solid #0b66ff;
+  margin-bottom: 15px;
+  padding-bottom: 3px;
+}
+
+/* Utbildnings och erfarenhetsobjekt */
+.item {
+  margin-bottom: 20px;
+}
+
+.item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.item p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+}
+
+.date {
+  color: #555;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* Yrkeserfarenhet och bildspel layout */
+.experience-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 450px; /* vänster lista + höger slideshow */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Lista med erfarenheter */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Bildspelet */
+.slideshow-container {
+  max-width: 450px;
+  height: 300px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Design för mobil */
+@media (max-width: 900px) {
+  .experience-wrapper {
+    grid-template-columns: 1fr; /* Stapla istället för sida vid sida */
+  }
+  .slideshow-container {
+    max-width: 100%;
+    height: 250px;
+    margin-top: 20px;
+  }
+}
+
